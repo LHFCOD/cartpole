@@ -1,0 +1,2570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application id="default">
+    <setting>
+        <user_timeout>30</user_timeout>
+        <total_timeout>500</total_timeout>
+        <score_timeout>300</score_timeout>
+        <critical_hour>4</critical_hour>
+        <history ttl="1">
+            <max_count>
+                <type name="app" value="300"/>
+                <type name="item" value="200"/>
+                <type name="sim_item" value="300"/>
+                <type name="good" value="300"/>
+                <type name="group_good" value="300"/>
+                <type name="group" value="100"/>
+                <type name="select" value="100"/>
+                <type name="activity" value="100"/>
+                <type name="scene" value="100"/>
+                <type name="article" value="100"/>
+                <type name="moment" value="100"/>
+                <type name="ygood" value="300"/>
+                <type name="ygroup" value="100"/>
+            </max_count>
+        </history>
+    </setting>
+    <plugins>
+        <recall>
+            <plugin id="XiaomiShopGuideRecallPlugin" class="com.xiaomi.youpin.recommend.shark.plugin.XiaomiShopGuideRecallPlugin" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="XiaomiShopGuideRule" class="com.xiaomi.youpin.recommend.shark.plugin.XiaomiShopGuideRuleV1" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="XiaomiProductRelateRecallPlugin" class="com.xiaomi.youpin.recommend.shark.plugin.XiaomiProductRelateRecallPlugin" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="XiaomiWaterFallRecallPlugin" class="com.xiaomi.youpin.recommend.shark.plugin.XiaomiWaterFallRecallPlugin" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="ArticleMomentGroupShuffle" class="com.xiaomi.youpin.recommend.shark.plugin.ArticleMomentGroupShuffle" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="NewHomeRule" class="com.xiaomi.youpin.recommend.shark.plugin.NewHomeRuleV1" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="MiShopOnlineDin" class="com.xiaomi.youpin.recommend.shark.plugin.MiShopOnlineDinV2" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="MiShopSequenceModel" class="com.xiaomi.youpin.recommend.shark.plugin.MiShopSequenceModelV1" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="ChannelHandlePick" class="com.xiaomi.youpin.recommend.shark.plugin.ChannelHandlePick" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="MiShopDien" class="com.xiaomi.youpin.recommend.shark.plugin.MiShopDienV1" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="TestRecallPlugin" class="com.xiaomi.youpin.recommend.shark.plugin.TestRecallPlugin" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-shark-plugin/1.0-SNAPSHOT/custom-shark-plugin-1.0-20200424.075419-52.jar"/>
+            <plugin id="GameCenterTest" class="com.xiaomi.bigdatakc.recommend.game.plugin.penguin.Test" url="https://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/bigdatakc/gamerec-plugin/1.0-SNAPSHOT/gamerec-plugin-1.0-20200508.070328-131.jar"/>
+            <plugin id="GameCenterV3" class="com.xiaomi.bigdatakc.recommend.game.plugin.penguin.MiGameV3" url="https://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/bigdatakc/gamerec-plugin/1.0-SNAPSHOT/gamerec-plugin-1.0-20200508.070328-131.jar"/>
+
+            <plugin id="GameTabV1" class="com.xiaomi.bigdatakc.recommend.appstore.plugin.penguin.GameTabV1" url="https://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/bigdatakc/appstorerec-plugin/1.0-SNAPSHOT/appstorerec-plugin-1.0-20200426.065023-127.jar"/>
+            <plugin id="GameTabV2" class="com.xiaomi.bigdatakc.recommend.appstore.plugin.penguin.GameTabV2" url="https://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/bigdatakc/appstorerec-plugin/1.0-SNAPSHOT/appstorerec-plugin-1.0-20200426.065023-127.jar"/>
+            <plugin id="GameTabV3" class="com.xiaomi.bigdatakc.recommend.appstore.plugin.penguin.GameTabV3" url="https://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/bigdatakc/appstorerec-plugin/1.0-SNAPSHOT/appstorerec-plugin-1.0-20200426.065023-127.jar"/>
+            <plugin id="GameTabTest" class="com.xiaomi.bigdatakc.recommend.appstore.plugin.penguin.GameTabTest" url="https://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/bigdatakc/appstorerec-plugin/1.0-SNAPSHOT/appstorerec-plugin-1.0-20200426.065023-127.jar"/>
+            <plugin id="GameHotV1" class="com.xiaomi.bigdatakc.recommend.appstore.plugin.penguin.GameHotV1" url="https://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/bigdatakc/appstorerec-plugin/1.0-SNAPSHOT/appstorerec-plugin-1.0-20200426.065023-127.jar"/>
+            <plugin id="Slot56V1" class="com.xiaomi.bigdatakc.recommend.appstore.plugin.penguin.Slot56V1" url="https://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/bigdatakc/appstorerec-plugin/1.0-SNAPSHOT/appstorerec-plugin-1.0-20200426.065023-127.jar"/>
+            <plugin id="Slot56V2" class="com.xiaomi.bigdatakc.recommend.appstore.plugin.penguin.Slot56V2" url="https://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/bigdatakc/appstorerec-plugin/1.0-SNAPSHOT/appstorerec-plugin-1.0-20200426.065023-127.jar"/>
+            <plugin id="YoupinTest" class="com.xiaomi.bigdatakc.recommend.appstore.plugin.penguin.YoupinTest" url="https://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/bigdatakc/appstorerec-plugin/1.0-SNAPSHOT/appstorerec-plugin-1.0-20200426.065023-127.jar"/>
+
+            <!--liangsheng -->
+            <plugin id="MishopGidFee1DayOrder" class="com.xiaomi.youpin.recommend.liangsheng.plugin.mishop.recall.MishopGidFee1DayOrder" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-plugin/1.0-SNAPSHOT/custom-plugin-1.0-20200321.064647-173.jar"/>
+            <plugin id="MishopGidFeeTodayOrder" class="com.xiaomi.youpin.recommend.liangsheng.plugin.mishop.recall.MishopGidFeeTodayOrder" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-plugin/1.0-SNAPSHOT/custom-plugin-1.0-20200321.064647-173.jar"/>
+            <plugin id="MishopUidSeqAndGmv" class="com.xiaomi.youpin.recommend.liangsheng.plugin.mishop.recall.MishopUidSeqAndGmv" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-plugin/1.0-SNAPSHOT/custom-plugin-1.0-20200321.064647-173.jar"/>
+            <plugin id="MishopYoutube" class="com.xiaomi.youpin.recommend.liangsheng.plugin.mishop.recall.MishopYoutube" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-plugin/1.0-SNAPSHOT/custom-plugin-1.0-20200321.064647-173.jar"/>
+            <plugin id="MishopProductRecall" class="com.xiaomi.youpin.recommend.liangsheng.plugin.mishop.recall.MishopProductRecall" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-plugin/1.0-SNAPSHOT/custom-plugin-1.0-20200321.064647-173.jar"/>
+            <plugin id="MishopTdm" class="com.xiaomi.youpin.recommend.liangsheng.plugin.mishop.recall.MishopTdm" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-plugin/1.0-SNAPSHOT/custom-plugin-1.0-20200321.064647-173.jar"/>
+            <plugin id="MishopBst" class="com.xiaomi.youpin.recommend.liangsheng.plugin.mishop.recall.MishopBst" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-plugin/1.0-SNAPSHOT/custom-plugin-1.0-20200321.064647-173.jar"/>
+            <plugin id="MishopBstV2" class="com.xiaomi.youpin.recommend.liangsheng.plugin.mishop.recall.MishopBstV2" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-plugin/1.0-SNAPSHOT/custom-plugin-1.0-20200321.064647-173.jar"/>
+
+            <!--liangsheng-seckill-->
+            <plugin id="MishopSeckill" class="com.xiaomi.youpin.recommend.liangsheng.plugin.mishop.seckill.recall.MishopSeckill" url="http://nexus.d.xiaomi.net/nexus/content/repositories/snapshots/com/xiaomi/youpin/recommend/custom-plugin/1.0-SNAPSHOT/custom-plugin-1.0-20200321.064647-173.jar"/>
+
+        </recall>
+        <rank>
+            <plugin id="HomeRule" batch="40" score_type_set="good,group_good"/>
+            <plugin id="YoupinLrFTRL" batch="40" score_type_set="ygood"/>
+            <plugin id="LightGBM" batch="80" score_type_set="good,group_good"/>
+            <plugin id="TFRankPlugin" batch="100" score_type_set="good,group_good"/>
+            <plugin id="MiShopLrFTRL" batch="100" score_type_set="good,group_good"/>
+            <plugin id="MiShopFmFTRL" batch="100" score_type_set="good,group_good"/>
+            <plugin id="OrderLrFTRL" batch="100" score_type_set="good,group_good"/>
+            <plugin id="MiShopDin" batch="200" score_type_set="good,group_good"/>
+            <plugin id="MiShopDien" batch="200" score_type_set="good,group_good"/>
+            <plugin id="MiShopBST" batch="200" score_type_set="good,group_good"/>
+            <plugin id="VisibleToOrderLGB" batch="100" score_type_set="good,group_good"/>
+            <plugin id="MultiLrFTRLLgb" batch="100" score_type_set="good,group_good"/>
+            <plugin id="StackingLrFTRL" batch="100" score_type_set="good,group_good"/>
+            <plugin id="AddOrderLrFTRLLgbRule" batch="100" score_type_set="good,group_good"/>
+            <plugin id="MiGameRule" batch="100" score_type_set="item"/>
+            <plugin id="MiGameLGB" batch="100" score_type_set="item"/>
+            <plugin id="MiGameLGBV6T" batch="100" score_type_set="item"/>
+            <plugin id="MiGameLGBV8R" batch="100" score_type_set="item"/>
+            <plugin id="GameTabRule" batch="100" score_type_set="app"/>
+            <plugin id="GameTabRuleTest" batch="100" score_type_set="app"/>
+            <plugin id="GameTabLGB" batch="100" score_type_set="app"/>
+            <plugin id="GameTabLGBV2" batch="100" score_type_set="app"/>
+            <plugin id="GameTabCBV1" batch="100" score_type_set="app"/>
+            <plugin id="Slot56LGBV1" batch="100" score_type_set="app"/>
+        </rank>
+        <rerank>
+        </rerank>
+        <fallback>
+        </fallback>
+    </plugins>
+    <models>
+        <tf-servings>
+            <!--<tf-serving id="MiShopDien" dns="dns:///ms-34625-mishopdien-1-0117173044.ns-34625.svc.cluster.local:9000" header="mishopdien" model_name="mishopdien" signature_name="serving-default" version="1" tensor_input="true"/>-->
+        </tf-servings>
+    </models>
+    <users>
+        <user id="family">1320302751,123,456</user>
+        <user id="company">1320302751</user>
+        <user id="lgb">847711656,863451956</user>
+        <user id="boss">1440578633,91411059,2251088798</user>
+        <user id="gamecenter_whitelist">1012851637</user>
+    </users>
+    <experiments>
+        <experiment id="xiaomi_waterfall_experiment_NewHomeRule">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="NewHomeRule">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="NewHomeRule">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_HomeRule">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="interval" value="10"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_LightGBM">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="LightGBM" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_TFRankPlugin">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="TFRankPlugin" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MiShopLrFTRL">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopLrFTRL" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MiShopFmFTRL">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopFmFTRL" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_OrderLrFTRL">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="HomeRule" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MiShopDin">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopDin" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MiShopDien">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopDien" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MiShopBST">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopBST" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MiShopOnlineDin">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MiShopOnlineDin">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MiShopSequenceModel">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MiShopSequenceModel">
+                                <properties>
+                                    <property name="model_name" value="basemodel"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+
+        <experiment id="xiaomi_waterfall_experiment_VisibleToOrderLGB">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="VisibleToOrderLGB" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MultiLrFTRLLgb">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MultiLrFTRLLgb" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_StackingLrFTRL">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="StackingLrFTRL" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_AddOrderLrFTRLLgbRule">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="AddOrderLrFTRLLgbRule" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ArticleMomentGroupShuffle">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ArticleMomentGroupShuffle">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+
+        <!--liangsheng -->
+        <experiment id="xiaomi_waterfall_experiment_MishopGidFee1DayOrder">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopGidFee1DayOrder">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopGidFee1DayOrder">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopGidFee1DayOrder">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopGidFee1DayOrder">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopGidFeeTodayOrder">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopGidFeeTodayOrder">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopGidFeeTodayOrder">
+                                <properties>
+                                    <property name="model_type" value="rule"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopGidFeeTodayOrder">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopGidFeeTodayOrder">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopUidSeqAndGmv">
+            <whitelists>
+                <whitelist user_id="boss">
+                    <recall ref="ArticleMomentGroupShuffle">
+                        <properties>
+                            <property name="group_type" value="common"/>
+                        </properties>
+                    </recall>
+                    <rerank ref="ArticleMomentGroupShuffle">
+                    </rerank>
+                </whitelist>
+            </whitelists>
+
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopUidSeqAndGmv">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopUidSeqAndGmv">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopUidSeqAndGmv">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopUidSeqAndGmv">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopYoutube">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                                <properties>
+                                    <property name="model_type" value="mishop_youtube"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopCb">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                                <properties>
+                                    <property name="model_type" value="mishop_cb"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopTdm">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopTdm">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopTdm">
+                                <properties>
+                                    <property name="model_type" value="mishop_tdm"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopTdm">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopTdm">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopBst">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                                <properties>
+                                    <property name="model_type" value="mishop_bst"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopBstV2">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBstV2">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBstV2">
+                                <properties>
+                                    <property name="model_type" value="mishop_bst_v2"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBstV2">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBstV2">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopLgb">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                                <properties>
+                                    <property name="model_type" value="mishop_lgb"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopLgb20">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                                <properties>
+                                    <property name="model_type" value="mishop_lgb_20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopFm">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                                <properties>
+                                    <property name="model_type" value="mishop_fm"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopBst">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <!--liangsheng-seckill-->
+        <experiment id="xiaomi_waterfall_experiment_MishopSeckill">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopSeckill">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopSeckill">
+                                <properties>
+                                    <property name="model_type" value="rule"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopSeckill">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopSeckill">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_waterfall_experiment_MishopSeckillV2">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopSeckill">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopSeckill">
+                                <properties>
+                                    <property name="model_type" value="rule"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopSeckill">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopSeckill">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+
+        <experiment id="xiaomi_shopguide_experiment_HomeRule">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="10"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_XiaomiShopGuideRule">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRule">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_MishopGidFeeTodayOrder">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="MishopGidFeeTodayOrder">
+                                <properties>
+                                    <property name="model_type" value="rule"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_LightGBM">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="LightGBM" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_TFRankPlugin">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="TFRankPlugin" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_MiShopLrFTRL">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopLrFTRL" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_MiShopFmFTRL">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopFmFTRL" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_OrderLrFTRL">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="OrderLrFTRL" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_MiShopDin">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopDin" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_MiShopDien">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopDien" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_MiShopBST">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopBST" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+
+        <experiment id="xiaomi_shopguide_experiment_VisibleToOrderLGB">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="VisibleToOrderLGB" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_MultiLrFTRLLgb">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MultiLrFTRLLgb" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_StackingLrFTRL">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="StackingLrFTRL" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_shopguide_experiment_AddOrderLrFTRLLgbRule">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="AddOrderLrFTRLLgbRule" percentage="100">
+                            </policy>
+                        </rank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiShopGuideRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+
+
+        <experiment id="xiaomi_product_experiment_MiShopLrFTRL">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiWaterFallRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopLrFTRL">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="XiaomiProductRelateRecallPlugin">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiWaterFallRecallPlugin">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiProductRelateRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_product_experiment_AddOrderLrFTRLLgbRule">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiWaterFallRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="AddOrderLrFTRLLgbRule">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="XiaomiProductRelateRecallPlugin">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiWaterFallRecallPlugin">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiProductRelateRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_product_experiment_MishopProductRecall">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopProductRecall">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiProductRelateRecallPlugin">
+                                <properties>
+                                    <property name="seed" value="top"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopProductRecall">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiProductRelateRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_product_bottom_experiment">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="XiaomiProductRelateRecallPlugin">
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiProductRelateRecallPlugin">
+                                <properties>
+                                    <property name="seed" value="bottom"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="MishopProductRecall">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="XiaomiProductRelateRecallPlugin">
+                                <properties>
+                                    <property name="interval" value="20"/>
+                                </properties>
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="xiaomi_channel_experiment_AddOrderLrFTRLLgbRule">
+            <fallback ref="ArticleMomentGroupShuffle">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ChannelHandlePick">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="AddOrderLrFTRLLgbRule">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="ChannelHandlePick">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="ChannelHandlePick">
+                                <properties>
+                                    <property name="group_type" value="common"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="ChannelHandlePick">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+
+        <experiment id="youpin_home_feed_experiment">
+            <fallback ref="TestRecallPlugin">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="TestRecallPlugin">
+                                <properties>
+                                    <property name="count" value="200"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiShopDin">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="TestRecallPlugin">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="TestRecallPlugin" percentage="100">
+                                <properties>
+                                    <property name="count" value="400"/>
+                                </properties>
+                            </policy>
+                        </recall>
+                        <rerank>
+                            <policy ref="TestRecallPlugin" percentage="100">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+
+        <experiment id="game_center_v1">
+            <whitelists>
+                <whitelist user_id="gamecenter_whitelist">
+                    <recall ref="GameCenterV3">
+                    </recall>
+                    <rank ref="MiGameRule">
+                    </rank>
+                    <rerank ref="GameCenterV3">
+                    </rerank>
+                </whitelist>
+            </whitelists>
+            <fallback ref="GameCenterV3">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameCenterV3">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiGameRule" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameCenterV3">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameCenterV3">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiGameRule" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameCenterV3">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+
+        <experiment id="game_center_test">
+            <fallback ref="GameCenterTest">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameCenterTest">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiGameRule" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameCenterTest">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameCenterTest">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="MiGameRule" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameCenterTest">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="game_tab_v1">
+            <fallback ref="GameTabV1">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameTabV1">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="GameTabLGBV2" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameTabV1">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameTabV1">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="GameTabLGBV2" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameTabV1">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="game_tab_v2">
+            <fallback ref="GameTabV1">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameTabV1">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="GameTabLGB" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameTabV1">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameTabV1">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="GameTabLGB" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameTabV1">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="game_tab_test">
+            <fallback ref="GameTabV3">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameTabV3">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="GameTabLGBV2" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameTabV3">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameTabV3">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="GameTabLGBV2" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameTabV3">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="game_hot_v1">
+            <fallback ref="GameHotV1">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameHotV1">
+                            </policy>
+                        </recall>
+                        <rank>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameHotV1">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="GameHotV1">
+                            </policy>
+                        </recall>
+                        <rank>
+                        </rank>
+                        <rerank>
+                            <policy ref="GameHotV1">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="game_slot_56">
+            <fallback ref="Slot56V1">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="Slot56V1">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="Slot56LGBV1" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="Slot56V1">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="Slot56V1">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="Slot56LGBV1" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="Slot56V1">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="game_slot_56_rank">
+            <fallback ref="Slot56V2">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="Slot56V2">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="Slot56LGBV1" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="Slot56V2">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="Slot56V2">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="Slot56LGBV1" percentage="100">
+                            </policy>
+                        </rank>
+                        <rerank>
+                            <policy ref="Slot56V2">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+        <experiment id="youpin_test">
+            <fallback ref="YoupinTest">
+            </fallback>
+            <login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="YoupinTest">
+                            </policy>
+                        </recall>
+                        <rank>
+                            <policy ref="YoupinLrFTRL"/>
+                        </rank>
+                        <rerank>
+                            <policy ref="YoupinTest">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </login>
+            <not_login>
+                <fields>
+                    <field percentage="100">
+                        <recall>
+                            <policy ref="YoupinTest">
+                            </policy>
+                        </recall>
+                        <rank>
+                        </rank>
+                        <rerank>
+                            <policy ref="YoupinTest">
+                            </policy>
+                        </rerank>
+                    </field>
+                </fields>
+            </not_login>
+        </experiment>
+    </experiments>
+
+    <scenarios>
+        <scenario id="test" experiment="xiaomi_shopguide_experiment_MishopGidFeeTodayOrder" infinite="false"/>
+        <!--14780-->
+        <!--首页feed流-->
+        <scenario id="xiaomi_home_waterfall" experiment="xiaomi_waterfall_experiment_HomeRule" infinite="true" remove_history="false">
+            <types>
+                <type value="good" item_black_list="11,2234" remove_count="300"/>
+                <type value="group_good" item_black_list="" remove_count="300"/>
+                <type value="select" item_black_list="" remove_count="8"/>
+                <type value="activity" item_black_list="" remove_count="5"/>
+                <type value="video" item_black_list="11,2234"/>
+                <type value="article" item_black_list="11,2234" remove_count="80"/>
+                <type value="moment" item_black_list="11,2234" remove_count="80"/>
+            </types>
+        </scenario>
+        <scenario id="xiaomi_home_waterfall_c" experiment="xiaomi_waterfall_experiment_NewHomeRule" infinite="true" remove_history="false">
+            <types>
+                <type value="good" item_black_list="" remove_count="200"/>
+                <type value="group_good" item_black_list="" remove_count="200"/>
+                <type value="select" item_black_list="" remove_count="8"/>
+                <type value="activity" item_black_list="" remove_count="5"/>
+                <type value="article" item_black_list="" remove_count="80"/>
+                <type value="moment" item_black_list="" remove_count="80"/>
+            </types>
+        </scenario>
+        <scenario id="xiaomi_home_waterfall_f" experiment="xiaomi_waterfall_experiment_NewHomeRule" infinite="true" remove_history="false">
+            <types>
+                <type value="good" item_black_list="" remove_count="300"/>
+                <type value="group_good" item_black_list="" remove_count="300"/>
+                <type value="select" item_black_list="" remove_count="8"/>
+                <type value="activity" item_black_list="" remove_count="5"/>
+                <type value="article" item_black_list="" remove_count="80"/>
+                <type value="moment" item_black_list="" remove_count="80"/>
+            </types>
+        </scenario>
+        <!--给定商品集的排序-->
+        <scenario id="xiaomi_home_shopguide" experiment="xiaomi_shopguide_experiment_MishopGidFeeTodayOrder" infinite="false"/>
+        <scenario id="xiaomi_home_shopguide_a" experiment="xiaomi_shopguide_experiment_HomeRule" infinite="false"/>
+        <scenario id="xiaomi_home_shopguide_b,xiaomi_home_shopguide_e,xiaomi_home_shopguide_h" experiment="xiaomi_shopguide_experiment_HomeRule" infinite="false"/>
+        <scenario id="xiaomi_home_shopguide_c" experiment="xiaomi_shopguide_experiment_HomeRule" infinite="false"/>
+        <scenario id="xiaomi_home_shopguide_d" experiment="xiaomi_shopguide_experiment_HomeRule" infinite="false"/>
+        <scenario id="xiaomi_home_shopguide_f" experiment="xiaomi_shopguide_experiment_HomeRule" infinite="false"/>
+        <scenario id="xiaomi_home_shopguide_g" experiment="xiaomi_shopguide_experiment_HomeRule" infinite="false"/>
+        <!--产品站-->
+        <scenario id="xiaomi_product" experiment="xiaomi_product_experiment_MishopProductRecall" infinite="false"/>
+        <scenario id="xiaomi_product_bottom" experiment="xiaomi_product_bottom_experiment" infinite="false"/>
+        <!--频道页精选-->
+        <scenario id="xiaomi_channel" experiment="xiaomi_channel_experiment_AddOrderLrFTRLLgbRule" infinite="false"/>
+        <!-- liangsheng -->
+        <scenario id="xiaomi_home_waterfall_a" experiment="xiaomi_waterfall_experiment_NewHomeRule" infinite="true" remove_history="false">
+            <types>
+                <type value="good" item_black_list="11,2234" remove_count="300"/>
+                <type value="group_good" item_black_list="" remove_count="300"/>
+                <type value="select" item_black_list="" remove_count="8"/>
+                <type value="activity" item_black_list="" remove_count="5"/>
+                <type value="video" item_black_list="11,2234"/>
+                <type value="article" item_black_list="11,2234" remove_count="80"/>
+                <type value="moment" item_black_list="11,2234" remove_count="80"/>
+            </types>
+        </scenario>
+        <scenario id="xiaomi_home_waterfall_b" experiment="xiaomi_waterfall_experiment_NewHomeRule" infinite="true" remove_history="false">
+            <types>
+                <type value="good" item_black_list="11,2234" remove_count="300"/>
+                <type value="group_good" item_black_list="" remove_count="300"/>
+                <type value="select" item_black_list="" remove_count="8"/>
+                <type value="activity" item_black_list="" remove_count="5"/>
+                <type value="video" item_black_list="11,2234"/>
+                <type value="article" item_black_list="11,2234" remove_count="80"/>
+                <type value="moment" item_black_list="11,2234" remove_count="80"/>
+            </types>
+        </scenario>
+        <scenario id="xiaomi_home_waterfall_d" experiment="xiaomi_waterfall_experiment_NewHomeRule" infinite="true" remove_history="false">
+            <types>
+                <type value="good" item_black_list="11,2234" remove_count="300"/>
+                <type value="group_good" item_black_list="" remove_count="300"/>
+                <type value="select" item_black_list="" remove_count="8"/>
+                <type value="activity" item_black_list="" remove_count="5"/>
+                <type value="video" item_black_list="11,2234"/>
+                <type value="article" item_black_list="11,2234" remove_count="80"/>
+                <type value="moment" item_black_list="11,2234" remove_count="80"/>
+            </types>
+        </scenario>
+        <scenario id="xiaomi_home_waterfall_e" experiment="xiaomi_waterfall_experiment_NewHomeRule" infinite="true" remove_history="false">
+            <types>
+                <type value="good" item_black_list="11,2234" remove_count="300"/>
+                <type value="group_good" item_black_list="" remove_count="300"/>
+                <type value="select" item_black_list="" remove_count="8"/>
+                <type value="activity" item_black_list="" remove_count="5"/>
+                <type value="video" item_black_list="11,2234"/>
+                <type value="article" item_black_list="11,2234" remove_count="80"/>
+                <type value="moment" item_black_list="11,2234" remove_count="80"/>
+            </types>
+        </scenario>
+        <scenario id="xiaomi_home_waterfall_g" experiment="xiaomi_waterfall_experiment_NewHomeRule" infinite="true" remove_history="false">
+            <types>
+                <type value="good" item_black_list="11,2234" remove_count="300"/>
+                <type value="group_good" item_black_list="" remove_count="300"/>
+                <type value="select" item_black_list="" remove_count="8"/>
+                <type value="activity" item_black_list="" remove_count="5"/>
+                <type value="video" item_black_list="11,2234"/>
+                <type value="article" item_black_list="11,2234" remove_count="80"/>
+                <type value="moment" item_black_list="11,2234" remove_count="80"/>
+            </types>
+        </scenario>
+        <scenario id="xiaomi_home_waterfall_h" experiment="xiaomi_waterfall_experiment_NewHomeRule" infinite="true" remove_history="false">
+            <types>
+                <type value="good" item_black_list="11,2234" remove_count="300"/>
+                <type value="group_good" item_black_list="" remove_count="300"/>
+                <type value="select" item_black_list="" remove_count="8"/>
+                <type value="activity" item_black_list="" remove_count="5"/>
+                <type value="video" item_black_list="11,2234"/>
+                <type value="article" item_black_list="11,2234" remove_count="80"/>
+                <type value="moment" item_black_list="11,2234" remove_count="80"/>
+            </types>
+        </scenario>
+        <!--test-->
+        <scenario id="xiaomi_home_waterfall_test1" experiment="xiaomi_waterfall_experiment_NewHomeRule" infinite="true" remove_history="false">
+            <types>
+                <type value="good" item_black_list="" remove_count="200"/>
+                <type value="group_good" item_black_list="" remove_count="200"/>
+                <type value="select" item_black_list="" remove_count="8"/>
+                <type value="activity" item_black_list="" remove_count="5"/>
+                <type value="article" item_black_list="" remove_count="80"/>
+                <type value="moment" item_black_list="" remove_count="80"/>
+            </types>
+        </scenario>
+        <!--seckill-->
+        <scenario id="xiaomi_home_seckill" experiment="xiaomi_waterfall_experiment_MishopSeckill" infinite="false" remove_history="false">
+        </scenario>
+        <scenario id="xiaomi_home_seckill_a" experiment="xiaomi_waterfall_experiment_MishopSeckillV2" infinite="false" remove_history="false">
+        </scenario>
+        <scenario id="xiaomi_list_seckill" experiment="xiaomi_waterfall_experiment_MishopSeckill" infinite="false" remove_history="false">
+        </scenario>
+        <scenario id="xiaomi_home_shopguide_test1" experiment="xiaomi_shopguide_experiment_MiShopDien" infinite="false"/>
+        <scenario id="xiaomi_game_test" experiment="game_center_test" infinite="true">
+            <types>
+                <type value="sim_item" item_black_list="" remove_count="100"/>
+                <type value="item" item_black_list="" remove_count="150"/>
+            </types>
+        </scenario>
+        <scenario id="xiaomi_game_v1" experiment="game_center_v1" infinite="true">
+            <types>
+                <type value="item" item_black_list="" remove_count="150"/>
+            </types>
+        </scenario>
+        <scenario id="appstore_game_v1" experiment="game_tab_v1" infinite="true">
+            <types>
+                <type value="app" item_black_list="" remove_count="0"/>
+            </types>
+        </scenario>
+        <scenario id="appstore_game_v2" experiment="game_tab_v2" infinite="true">
+            <types>
+                <type value="app" item_black_list="" remove_count="0"/>
+            </types>
+        </scenario>
+        <scenario id="appstore_game_test" experiment="game_tab_test" infinite="true">
+            <types>
+                <type value="app" item_black_list="" remove_count="0"/>
+            </types>
+        </scenario>
+        <scenario id="appstore_game_hot_v1" experiment="game_hot_v1" infinite="true">
+            <types>
+                <type value="app" item_black_list="" remove_count="0"/>
+            </types>
+        </scenario>
+        <scenario id="appstore_game_slot56" experiment="game_slot_56" infinite="true">
+            <types>
+                <type value="app" item_black_list="" remove_count="0"/>
+            </types>
+        </scenario>
+        <scenario id="appstore_game_slot56_rank" experiment="game_slot_56_rank" infinite="true">
+            <types>
+                <type value="app" item_black_list="" remove_count="0"/>
+            </types>
+        </scenario>
+        <scenario id="youpin_home_feed" experiment="youpin_test" infinite="true" remove_history="false">
+            <types>
+                <type value="ygood" item_black_list="" remove_count="100"/>
+            </types>
+        </scenario>
+    </scenarios>
+</application>
